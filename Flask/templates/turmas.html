@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turmas</title>
+</head>
+
+<body>
+    <h1>Turmas</h1>
+
+
+
+    <table>
+        <th>Ano</th>
+        <th>Turma</th>
+        <th>Alunos</th>
+        <th>DT</th>
+        {% for turma in lista_turmas %}
+        <tr>
+            <td>{{ turma[0] }}</td>
+            <td><a href="/alunos/{{ loop.index0 }}">{{ turma[1] }}</a></td>
+            <td>{{ turma[2] }}</td>
+            <td>{{ turma[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+</body>
+
+</html>

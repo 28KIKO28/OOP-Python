@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alunos da Turma {{ turma[1] }}</title>
+    
+</head>
+<body>
+    <h1>Alunos da Turma {{ turma[1] }}:</h1>
+    <hr>
+    <table>
+        <tr>
+            <th>Numero</th>
+            <th>Nome</th>
+        </tr>
+        {% for aluno in alunos %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ aluno }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <hr>
+    <a href="/turmas">Voltar às Turmas</a>
+</body>
+</html>

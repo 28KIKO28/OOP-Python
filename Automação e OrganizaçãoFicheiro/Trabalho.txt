@@ -1,0 +1,40 @@
+Bom dia!
+Hoje vou apresentar um tema importante da Matemática do 9.º ano: as equações do 2.º grau.
+Este tipo de equação aparece em muitos problemas do dia a dia, e vamos ver como se resolvem de forma simples.
+
+Uma equação do 2.º grau é uma equação da forma:
+ax² + bx + c = 0,
+em que a, b e c são números reais, e a tem de ser diferente de zero.
+O nosso objetivo é descobrir o valor de x.
+
+Vamos usar como exemplo a equação:
+x² - 5x + 6 = 0
+Neste caso, a = 1, b = -5 e c = 6.
+
+Para resolver, utilizamos a fórmula resolvente, também conhecida como fórmula de Bhaskara:
+
+x = (-b ± √Δ) / 2a
+
+O Δ (delta) calcula-se da seguinte forma:
+Δ = b² - 4ac
+
+No nosso exemplo:
+Δ = (-5)² - 4×1×6
+Δ = 25 - 24
+Δ = 1
+
+Agora substituímos na fórmula:
+x = (-(-5) ± √1) / (2×1)
+x = (5 ± 1) / 2
+
+Assim, temos duas soluções:
+x = (5 + 1) / 2 = 3
+x = (5 - 1) / 2 = 2
+
+Ou seja, as soluções da equação são x = 3 e x = 2.
+
+As equações do 2.º grau resolvem-se facilmente com a fórmula resolvente.
+O mais importante é identificar corretamente os valores de a, b e c, calcular o Δ, e aplicar a fórmula com atenção.
+
+Obrigado pela vossa atenção!
+Se alguém tiver alguma dúvida, posso tentar esclarecer.

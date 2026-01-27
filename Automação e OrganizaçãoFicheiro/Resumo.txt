@@ -1,0 +1,130 @@
+Dos números naturais aos números inteiros
+Os números naturais são os números que usamos para contar. O conjunto dos números naturais representa-se por ℕ, começa no zero e é infinito.
+ℕ = {0, 1, 2, 3, 4, …}
+
+O zero não é positivo nem negativo. Os restantes números naturais são números inteiros positivos.
+Se ao conjunto dos números naturais juntarmos os números simétricos dos inteiros positivos, obtemos o conjunto dos números inteiros, que representa-se por ℤ.
+ℤ = { … , – 3, – 2, – 1, 0, 1, 2, 3, …}
+
+Valor absoluto ou módulo de um número
+O valor absoluto ou módulo de um número é a distância do ponto na reta numérica que representa esse número ao zero. Como uma distância não pode ser negativa, o valor absoluto é sempre um número natural.
+Para representar o módulo de um número, colocamos o número entre barras (| |).
+| 5 | = 5
+| – 5 | = 5
+| 0 | = 0
+
+Técnica do elevador para somar e subtrair números inteiros
+Para somar ou subtrair números inteiros, podemos “pensar/imaginar” que estamos num elevador. O primeiro número é o piso em que estamos e o segundo número representa quantos pisos vamos subir ou descer.
+Numa soma subimos → 5 + 4 = 9
+Numa subtração descemos → 5 – 4 = 1
+Quando o primeiro número é negativo, ao somar vamos nos aproximar do zero → – 5 + 4 = – 1
+Quando o primeiro número é negativo, ao subtrair vamos nos afastar do zero → – 5 – 4 = – 9
+Quando o primeiro número é negativo, ao somar um número com maior valor absoluto, ultrapassamos o zero e o resultado fica positivo → – 5 + 10 = 5
+Quando o primeiro número é positivo, ao subtrair com um número de maior valor absoluto, também ultrapassamos o zero e o resultado fica negativo → 5 – 10 = – 15
+Ou seja, numa adição ou subtração, o resultado só muda de sinal se o que somamos ou subtraímos tem maior valor absoluto.
+
+Propriedades da adição
+Propriedade comutativa: podemos alterar a ordem das parcelas → – 5 + 8 = 8 + (- 5)
+Propriedade associativa: podemos alterar a ordem das adições → – 5 + 8 + 2 = (- 5 + 8) + 2 = – 5 + (8 + 2)
+Propriedade do elemento neutro: somar zero não altera o resultado → – 5 + 0 = – 5
+Propriedade do elemento simétrico: a soma de números simétricos é igual a zero → – 5 + 5 = 0
+
+Parênteses nas operações
+Os parênteses são utilizados nas operações para indicar prioridade → 5 + (8 + 2) = 5 + 10
+No entanto, também podem ser utilizados apenas para separar dois sinais juntos → 5 + (- 2)
+
+Simplificação da escrita
+Quando temos sinais de mais (+) e menos (-) juntos, fazemos a simplificação da escrita, ou seja, tiramos parênteses e passamos a um só sinal de mais ou de menos.
+Dois sinais iguais passam a um só sinal de mais, dois sinais diferentes passam a um só sinal de menos.
++ (+) = + → 5 + (+ 5) = 5 + 5
+– (-) = + → 5 – (- 5) = 5 + 5
++ (-) = – → 5 + (- 5) = 5 – 5
+– (+) = – → 5 + (- 5) = 5 – 5
+
+Simétrico da soma e da subtração
+O sinal de menos antes de parênteses troca os sinais de todos os números que se encontram dentro de parênteses.
+– (5 – 3 + 1) = – 5 + 3 – 1
+
+Omissão do sinal de multiplicação (⨯)
+O sinal da multiplicação (⨯) muitas vezes encontra-se omitido, por exemplo quando a seguir tem um parênteses.
+4 ⨯ (-5 + 2) = 4 (-5 + 2)
+(4 + 1) ⨯ (- 5 + 2 -1) = (4 + 1) (- 5 + 2 -1)
+
+Propriedade distributiva
+Na multiplicação de um número com uma adição ou subtração, efetuamos primeiro as operações dentro de parênteses ou aplicamos a propriedade distributiva, ou seja, multiplicamos esse número com cada número que está dentro de parênteses, tendo em atenção aos sinais. Se os sinais dos fatores forem iguais, o resultado fica positivo, mas se forem diferentes fica negativo.
+4 (-5 + 2)
+= 4 ⨯ (-5) + 4 ⨯ 2
+= – 20 + 8
+
+Também podemos utilizar a propriedade distributiva quando temos uma multiplicação entre operações de adição e subtração. Cada um dos números dentro dos primeiros parênteses multiplica com cada um dos números dos segundos parênteses, tendo sempre em atenção primeiro os sinais.
+(4 + 1) (- 5 + 2 -1)
+= 4 ⨯ (- 5) + 4 ⨯ 2 + 4 ⨯ (-1) + 1 ⨯ (-5) + 1 ⨯ 2 + 1 ⨯ (- 1)
+= – 20 + 8 – 4 – 5 + 2 – 1
+
+Mais propriedades da multiplicação
+Propriedade comutativa: podemos alterar a ordem dos fatores → – 5 ⨯ 8 = 8 ⨯ (- 5)
+Propriedade associativa: podemos alterar a ordem das multiplicações → – 5 ⨯ 8 ⨯ 2 = (- 5 ⨯ 8) + 2 = – 5 ⨯ (8 ⨯ 2)
+Propriedade do elemento neutro: multiplicar por um não altera o resultado → – 5 ⨯ 1 = – 5
+Propriedade do elemento absorvente: multiplicar por zero é sempre igual a zero → – 5 ⨯ 0 = 0
+
+Expressões numéricas
+Numa expressão numérica (conjunto de várias operações) temos de ter em atenção às prioridades. Multiplicações e divisões têm sempre prioridade em relação às adições e subtrações. Quando há parênteses, podemos retirá-los realizando primeiro as operações dentro deles ou (preferencialmente) através da simplificação da escrita ou da propriedade distributiva.
+1 + 2 (- 2 + 5) – (- 2)
+= 1 – 4 + 10 – (- 2)
+= 1- 4 + 10 + 2
+= – 3 +10 + 2
+= 7 + 2
+=9
+
+Frações
+A divisão de um número inteiro por outro número inteiro diferente de zero corresponde a uma fração.
+2 : 5 = 2⁄5
+
+Ao primeiro número dá-se o nome de numerador e ao segundo denominador.
+
+Dízimas
+Uma fração pode corresponder a um número inteiro ou a uma dízima finita (com parte decimal finita) ou a uma dízima infinita periódica (com parte decimal com sequência de números que se repete infinitamente).
+4⁄2 = 2 → número inteiro
+2⁄5 = 0,4 → dízima finita
+2⁄3 = 0,6666… = 0,(6) → dízima infinita periódica
+
+Adição e subtração de frações
+Para adicionar (ou subtrair) frações devemos obter frações equivalentes com o mesmo denominador. Depois, soma-se (ou subtrai-se) o numerador e mantém-se o denominador.
+2⁄3 + 2⁄5
+= 10⁄15 + 6⁄15
+= 16⁄15
+
+Multiplicação de frações
+Para multiplicar frações não é necessário denominadores iguais. Basta multiplicar numerador com numerador e denominador com denominador.
+2⁄3 ⨯ 2⁄5
+= 4⁄15
+
+Inverso de um número
+Se trocarmos o numerador com o denominador, obtemos o inverso do número.
+2⁄3 é inverso de 3⁄2
+1⁄3 é inverso de 3
+
+Propriedades da multiplicação
+Propriedade do elemento inverso: a multiplicação de um número pelo seu inverso é sempre igual a um → 2⁄3 ⨯ 3⁄2 = 1
+
+Se apenas for o numerador igual ao denominador da outra fração (ou vice-versa), podemos “cortá-los” nas duas frações e o resultado fica uma fração com o outro numerador e com o outro denominador que não foram cortados.
+2⁄3 ⨯ 5⁄2 = 5⁄3
+
+Divisão de frações
+É possível transformar uma divisão numa multiplicação trocando a segunda fração pelo seu inverso.
+2⁄3 : 2⁄5
+= 2⁄3 ⨯ 5⁄2
+= 10⁄6
+
+Operações com de frações com números inteiros e dízimas
+Quando aparecem números inteiros ou na forma de dízima nas operações com frações, devemos em primeiro lugar passar esses números para forma de fração.
+Aos números inteiros basta acrescentar o número um como denominador, e as dízimas finitas podem ser transformadas em frações decimais.
+4 + 0,3 ⨯ 1⁄2
+= 4⁄1 + 3⁄10 ⨯ 1⁄2
+
+Operações com números racionais
+Todas as propriedades e prioridades das operações com números inteiros são aplicáveis também nas operações com números racionais.
+
+Forma irredutível
+Se o resultado final for uma dízima, devemos deixar o valor na forma de fração irredutível.
+10⁄6 = 5⁄3
