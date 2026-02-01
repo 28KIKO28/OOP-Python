@@ -3,23 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarefas</title>
+    <title>Novas Tarefas</title>
     <style>
     </style>
 </head>
-<script>
-
-</script>
 <body>
     <h2>Novas Tarefas:</h2>
-    <form>
+    <form action="/adicionar", method="post">
         <label>Tarefa:</label><br>
-        <input type="text" id="tarefa"><br>
+        <input type="text" name="tarefa" placeholder="tarefa"><br>
         <label>Disciplina:</label><br>
-        <input type="text" id="disciplina"><br>
+        <input type="text" name="disciplina" placeholder="disciplina"><br>
         <label>Data de Entrega:</label><br>
-        <input type="date" id="data"><br><br>
-        <button id="enviar" onclick="sair">Enviar</button>
+        <input type="date" name="data" placeholder="data"><br><br>
+        <button id="enviar">Enviar</button>
     </form>
+
 </body>
 </html>

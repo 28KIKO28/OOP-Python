@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,request,redirect
+from os import O_APPEND
 
 app = Flask(__name__)
 
@@ -13,6 +14,9 @@ lista_turmas = [
     (10, 8, 20, "Sílvia", ["Júlia", "Kauã", "Lívia", "Murilo", "Nina", "Otávio", "Pietro", "Quirino", "Rosa", "Sandro", "Tatiana", "Ubirajara", "Valentina", "William", "Xandra", "Yasmin", "Zeca", "Alice", "Bruno", "Catarina"]),
     (10, 9, 20, "Filipe", ["Tatiana", "Ursula", "Vitor", "Wagner", "Xuxa", "Yuri", "Zélia", "Amanda", "Bruno", "Camila", "Diego", "Eduarda", "Fábio", "Gabriela", "Hugo", "Isadora", "João", "Kátia", "Leonardo", "Marina", "Nicolas"])
 ]
+
+tarefas = []
+
 @app.route("/")
 def turmas ():
     return render_template ("turmas.html", lista_turmas=lista_turmas)
@@ -23,11 +27,19 @@ def alunos (indice):
     alunos = sorted(turma[4])
     return render_template ("alunos.html", turma=turma, alunos=alunos)
 
+@app.route("/adicionar", methods=["post"])
+def adicionar():
+    nova_tarefa = (
+        request.form["tarefa"],request.form["disciplina"],request.form["data"],"Pendente")
+    tarefas.append(nova_tarefa)
+    return redirect("/tarefas")
 
 @app.route("/tarefas")
-def tarefas():
-    return render_template("tarefas.html")
-    
+def listar_tarefas():
+    return render_template("listatarefas.html", tarefas=tarefas)
 
-if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0')
+@app.route("/novastarefas")
+def nova_tarefa_form():
+    return render_template("tarefas.html")
+
+app.run(debug=True, host='0.0.0.0')

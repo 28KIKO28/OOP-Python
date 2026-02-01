@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas</title>
+</head>
+<body>
+    <h1>Tarefas</h1>
+    <table border="2">
+        <thead>
+            <tr>
+                <th>Nº</th>
+                <th>Tarefa</th>
+                <th>Disciplina</th>
+                <th>Entrega</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for tarefa in tarefas %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ tarefa[0] }}</td>
+                <td>{{ tarefa[1] }}</td>
+                <td>{{ tarefa[2] }}</td>
+                <td>{{ tarefa[3] }}/<td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <hr>
+    <a href="/novastarefas">Adicionar um nova Tarefa</a>
+</body>
+</html>
