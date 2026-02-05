@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
@@ -20,14 +20,14 @@
         {% for turma in lista_turmas %}
         <tr>
             <td>{{ turma[0] }}</td>
-            <td><a href="/alunos/{{ loop.index0 }}">{{ turma[1] }}</a></td>
+            <td><a href="/class/{{ loop.index0 }}">{{ turma[1] }}</a></td>
             <td>{{ turma[2] }}</td>
             <td>{{ turma[3] }}</td>
         </tr>
         {% endfor %}
     </table>
     <hr>
-    <a href="/tarefas">Tarefas</a>
+    <a href="/tasks">Tarefas</a>
 </body>
 
 </html>

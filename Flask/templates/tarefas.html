@@ -9,15 +9,23 @@
 </head>
 <body>
     <h2>Novas Tarefas:</h2>
-    <form action="/adicionar", method="post">
+    <form action="/add", method="post">
         <label>Tarefa:</label><br>
-        <input type="text" name="tarefa" placeholder="tarefa"><br>
+        <input type="text" name="tarefa" placeholder="Qual a Tarefa?"><br>
         <label>Disciplina:</label><br>
-        <input type="text" name="disciplina" placeholder="disciplina"><br>
-        <label>Data de Entrega:</label><br>
-        <input type="date" name="data" placeholder="data"><br><br>
-        <button id="enviar">Enviar</button>
+        <input type="text" name="disciplina" placeholder="Qual a Disciplina?"><br>
+        <label>Prioridade:</label><br>
+        <select name="prioridade" placeholder="Prioridade">
+            <option disabled selected>Selecione a Prioridade</option>
+            <option>Alta</option>
+            <option>Média</option>
+            <option>Baixa</option>
+            <option>Opcional</option>
+        </select><br>
+        <label>Data:</label><br>
+        <input type="date" name="data" placeholder="data" value=datae><br>
+        <p></p>
+        <button>Adicionar Tarefa</button>
     </form>
-
 </body>
 </html>

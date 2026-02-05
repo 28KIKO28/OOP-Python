@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarefas</title>
+    <style>
+        table {
+            border: 1cap;
+        }
+    </style>
 </head>
 <body>
     <h1>Tarefas</h1>
-    <table border="2">
+    <table class="table">
         <thead>
             <tr>
                 <th>Nº</th>
                 <th>Tarefa</th>
                 <th>Disciplina</th>
+                <th>Prioridade</th>
                 <th>Entrega</th>
                 <th>Estado</th>
             </tr>
@@ -24,12 +30,13 @@
                 <td>{{ tarefa[0] }}</td>
                 <td>{{ tarefa[1] }}</td>
                 <td>{{ tarefa[2] }}</td>
-                <td>{{ tarefa[3] }}/<td>
+                <td>{{ tarefa[3] }}</tr>
+                <td>{{ tarefa[4] }}</td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
     <hr>
-    <a href="/novastarefas">Adicionar um nova Tarefa</a>
+    <a href="/addtask">Adicionar um nova Tarefa</a>
 </body>
 </html>

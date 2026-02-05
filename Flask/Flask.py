@@ -1,5 +1,7 @@
 from flask import Flask, render_template,request,redirect
 from os import O_APPEND
+import calendar
+import datetime
 
 app = Flask(__name__)
 
@@ -21,24 +23,24 @@ tarefas = []
 def turmas ():
     return render_template ("turmas.html", lista_turmas=lista_turmas)
 
-@app.route("/alunos/<int:indice>")
+@app.route("/class/<int:indice>")
 def alunos (indice):
     turma = lista_turmas[indice]
     alunos = sorted(turma[4])
     return render_template ("alunos.html", turma=turma, alunos=alunos)
 
-@app.route("/adicionar", methods=["post"])
+@app.route("/add", methods=["post"])
 def adicionar():
     nova_tarefa = (
-        request.form["tarefa"],request.form["disciplina"],request.form["data"],"Pendente")
+        request.form["tarefa"],request.form["disciplina"],request.form["prioridade"],request.form["data"],"Pendente")
     tarefas.append(nova_tarefa)
-    return redirect("/tarefas")
+    return redirect("/tasks")
 
-@app.route("/tarefas")
+@app.route("/tasks")
 def listar_tarefas():
     return render_template("listatarefas.html", tarefas=tarefas)
 
-@app.route("/novastarefas")
+@app.route("/addtask")
 def nova_tarefa_form():
     return render_template("tarefas.html")
 
