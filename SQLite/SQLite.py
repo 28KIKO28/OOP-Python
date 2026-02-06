@@ -1,20 +1,25 @@
 import sqlite3
 
-conexao = sqlite3.connect("tarefas.db")
-cursor = sqlite3.Cursor(conexao)
+def conectar():
+    return sqlite3.connect("agenda.db")
 
-cursor.execute("""
-CREATE TABLE IF NOT EXISTS tarefas (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    titulo TEXT NOT NULL,
-    materia TEXT NOT NULL,
-    status TEXT NOT NULL
-)
-""")
-
+def criar_tabela():
+    con = conectar()
+    cursor = con.cursor()
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS tarefas (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        titulo TEXT NOT NULL,
+        materia TEXT NOT NULL,
+        status TEXT NOT NULL
+    )
+    """)
+    con.commit()
+    con.close()
 
 def adicionar_tarefa(tittle, subject, status):
-    cursor.execute("""INSERT INTO tarefas (titulo, materia, status)
+    con = conectar()
+    con.execute("""INSERT INTO tarefas (titulo, materia, status)
     VALUES (?, ?, ?)
     """, (tittle, subject, status))
     conexao.commit()

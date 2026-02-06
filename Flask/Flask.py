@@ -2,6 +2,9 @@ from flask import Flask, render_template,request,redirect
 from os import O_APPEND
 import calendar
 import datetime
+from SQLite import conectar,criar_tabela,adicionar_tarefa
+
+criar_tabela()
 
 app = Flask(__name__)
 
@@ -17,7 +20,6 @@ lista_turmas = [
     (10, 9, 20, "Filipe", ["Tatiana", "Ursula", "Vitor", "Wagner", "Xuxa", "Yuri", "Zélia", "Amanda", "Bruno", "Camila", "Diego", "Eduarda", "Fábio", "Gabriela", "Hugo", "Isadora", "João", "Kátia", "Leonardo", "Marina", "Nicolas"])
 ]
 
-tarefas = []
 
 @app.route("/")
 def turmas ():
@@ -31,8 +33,7 @@ def alunos (indice):
 
 @app.route("/add", methods=["post"])
 def adicionar():
-    nova_tarefa = (
-        request.form["tarefa"],request.form["disciplina"],request.form["prioridade"],request.form["data"],"Pendente")
+    nova_tarefa = (request.form["tarefa"],request.form["disciplina"],request.form["prioridade"],request.form["data"],"Pendente")
     tarefas.append(nova_tarefa)
     return redirect("/tasks")
 
