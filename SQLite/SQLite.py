@@ -1,7 +1,7 @@
 import sqlite3
 
 def conectar_login():
-    return sqlite3.connect("login.db")
+    return sqlite3.connect("users.db")
 def login_tabela():
     con = conectar_login
     cursor = con.cursor()
@@ -11,7 +11,7 @@ def login_tabela():
             login TEXT NOT NULL,
             nickname TEXT NOT NULL,
             password TEXT NOT NULL,
-            role TEXT CHECK(role in ('aluno','professor','admin)) TEXT NOT NULL
+            role TEXT CHECK(role in ('student','teacher','admin','dt')) TEXT NOT NULL
     )
     """)
     con.commit()
@@ -22,7 +22,7 @@ def criar_conta():
     cursor.cursor()
 
 def conectar_tarefas():
-    return sqlite3.connect("tarefas.db")
+    return sqlite3.connect("tasks.db")
 
 def criar_tabela_tarefas():
     con = conectar_tarefas()
@@ -30,9 +30,12 @@ def criar_tabela_tarefas():
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS tarefas (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        titulo TEXT NOT NULL,
-        materia TEXT NOT NULL,
-        status TEXT NOT NULL
+        task TEXT NOT NULL,
+        subject TEXT NOT NULL,
+        status TEXT NOT NULL,
+        due_date DATE NOT NULL,
+        prioritie TEXT NOT NULL,
+        teacher TEXT NOT NULL
     )
     """)
     con.commit()
@@ -40,7 +43,7 @@ def criar_tabela_tarefas():
 
 def adicionar_tarefa(tittle, subject, status, prioritie, teacher):
     con = conectar_tarefas()
-    con.execute("""INSERT INTO tarefas (titulo, materia, status, prioridade, professor)
+    con.execute("""INSERT INTO tarefas (task, subject, status, prioritie, teacher)
     VALUES (?, ?, ?, ?, ?)
     """, (tittle, subject, status, prioritie, teacher))
     con.commit()

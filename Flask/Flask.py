@@ -1,10 +1,8 @@
 from flask import Flask, render_template,request,redirect
 from os import O_APPEND
-import calendar
-import datetime
-from SQLite import conectar,criar_tabela,adicionar_tarefa
+# from SQLite import criar_tabela
 
-criar_tabela()
+# criar_tabela()
 
 app = Flask(__name__)
 
@@ -20,6 +18,7 @@ lista_turmas = [
     (10, 9, 20, "Filipe", ["Tatiana", "Ursula", "Vitor", "Wagner", "Xuxa", "Yuri", "Zélia", "Amanda", "Bruno", "Camila", "Diego", "Eduarda", "Fábio", "Gabriela", "Hugo", "Isadora", "João", "Kátia", "Leonardo", "Marina", "Nicolas"])
 ]
 
+tarefas = []
 
 @app.route("/")
 def turmas ():
