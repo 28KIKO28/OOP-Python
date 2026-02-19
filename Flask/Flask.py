@@ -13,7 +13,7 @@ lista_turmas = [
     (10, 4, 20, "Mariana", ["Eduardo" , "Bianca" , "Felipe" , "Larissa" , "Rafael" , "Amanda" , "Gustavo" , "Isadora" , "Bruna" , "Caio" , "Letícia" , "Vinícius", "Mariana", "Leonardo", "Sabrina", "Daniel", "Camila", "Bruno", "Natália", "Lucas"]),
     (10, 5, 20, "Lucas", ["Renan", "Sabrina", "Thiago", "Vanessa", "Wesley", "Ximena", "Yago", "Zara", "Aline", "Brenda", "Caetano", "Daniel", "Emanuel", "Fabiana", "Geraldo", "Heloísa", "Igor", "Jéssica", "Kléber", "Larissa"]),
     (10, 6, 20, "Fernanda", ["Mário", "Natasha", "Olívia", "Júlia", "Kauã", "Lívia", "Murilo", "Nina", "Otávio", "Pietro", "Quirino", "Rosa", "Sandro", "Tatiana", "Ubirajara", "Valentina", "William", "Xandra", "Yasmin", "Zeca"]),
-    (10, 7, 20, "Ricardo", ["Vanessa", "Wesley", "Ximena", "Yago", "Zara", "Aline", "Brenda", "Caetano", "Daniel", "Emanuel", "Fabiana", "Geraldo", "Heloísa", "Igor", "Jéssica", "Kléber", "Larissa", "Mário", "Natasha", "Olívia"]),
+    (10, 7, 20, "Ricsardo", ["Vanessa", "Wesley", "Ximena", "Yago", "Zara", "Aline", "Brenda", "Caetano", "Daniel", "Emanuel", "Fabiana", "Geraldo", "Heloísa", "Igor", "Jéssica", "Kléber", "Larissa", "Mário", "Natasha", "Olívia"]),
     (10, 8, 20, "Sílvia", ["Júlia", "Kauã", "Lívia", "Murilo", "Nina", "Otávio", "Pietro", "Quirino", "Rosa", "Sandro", "Tatiana", "Ubirajara", "Valentina", "William", "Xandra", "Yasmin", "Zeca", "Alice", "Bruno", "Catarina"]),
     (10, 9, 20, "Filipe", ["Tatiana", "Ursula", "Vitor", "Wagner", "Xuxa", "Yuri", "Zélia", "Amanda", "Bruno", "Camila", "Diego", "Eduarda", "Fábio", "Gabriela", "Hugo", "Isadora", "João", "Kátia", "Leonardo", "Marina", "Nicolas"])
 ]
