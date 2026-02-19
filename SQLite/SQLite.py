@@ -1,10 +1,31 @@
 import sqlite3
 
-def conectar():
-    return sqlite3.connect("agenda.db")
+def conectar_login():
+    return sqlite3.connect("login.db")
+def login_tabela():
+    con = conectar_login
+    cursor = con.cursor()
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS tarefas (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            login TEXT NOT NULL,
+            nickname TEXT NOT NULL,
+            password TEXT NOT NULL,
+            role TEXT CHECK(role in ('aluno','professor','admin)) TEXT NOT NULL
+    )
+    """)
+    con.commit()
+    con.close()
+def criar_conta():
+    con = conectar_login
+    cursor = con.cursor
+    cursor.cursor()
 
-def criar_tabela():
-    con = conectar()
+def conectar_tarefas():
+    return sqlite3.connect("tarefas.db")
+
+def criar_tabela_tarefas():
+    con = conectar_tarefas()
     cursor = con.cursor()
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS tarefas (
@@ -17,39 +38,33 @@ def criar_tabela():
     con.commit()
     con.close()
 
-def adicionar_tarefa(tittle, subject, status):
-    con = conectar()
-    con.execute("""INSERT INTO tarefas (titulo, materia, status)
-    VALUES (?, ?, ?)
-    """, (tittle, subject, status))
-    conexao.commit()
+def adicionar_tarefa(tittle, subject, status, prioritie, teacher):
+    con = conectar_tarefas()
+    con.execute("""INSERT INTO tarefas (titulo, materia, status, prioridade, professor)
+    VALUES (?, ?, ?, ?, ?)
+    """, (tittle, subject, status, prioritie, teacher))
+    con.commit()
+    con.close()
 
-cursor.execute("SELECT * FROM tarefas")
-tarefas = cursor.fetchall()
-while True:
-    escolha = input("[1] - Adicionar tarefa\n[2] - Mostrar tarefas\n[3] - Apagar tarefas\n[4] - Concuir uma tarefa\n[5] - Sair\nEscolha uma opção: ")
-    if escolha == '1':
-        print()
-        titulo = input("Título da tarefa: ")
-        materia = input("Matéria: ")
-        status = "Pendente"
-        adicionar_tarefa(titulo, materia, status)
-        print("Tarefa adicionada.\n")
-    elif escolha == '2':
-        print()
+def tarefas_concluir():
+        con = conectar_tarefas
+        cursor = con.cursor()
         cursor.execute("SELECT * FROM tarefas")
         tarefas = cursor.fetchall()
-        if not tarefas:
-            print("Não há tarefas.\n")
-        else:
-            print("+----+--------------------------------+----------------------+-----------+")
-            print("| Nº | Tarefa                         | Matéria              | Estado    |")
-            print("+----+--------------------------------+----------------------+-----------+")
-            for i, t in enumerate(tarefas, start=1):
-                print(f"{i}ª Tarefa | {t[0]:<25} | {t[1]:<20} | {t[2]:<14}")
-            print("+----+------------------------------+------------------+-----------+")    
+def tarefas_ler():
+    con = conectar_tarefas
+    cursor = con.cursor()
+    con.execute("SELECT * FROM tarefas")
+    tarefas = cursor.fetchall()
+    if not tarefas:
+        tarefas = False
+        return tarefas
+    else:
+        return tarefas
 
-    elif escolha == '3':
+""" 
+while True:
+    if escolha == 'Apagar':
         print()
         cursor.execute("SELECT * FROM tarefas")
         tarefas = cursor.fetchall()
@@ -63,7 +78,7 @@ while True:
             print("Tarefa apagada.\n")
         else:
             print("Essa tarefa não existe.\n")
-    elif escolha == '4':
+    elif escolha == 'Concluir':
         cursor.execute("SELECT * FROM tarefas")
         tarefas = cursor.fetchall()
         for i, tarefa in enumerate(tarefas, start=0):
@@ -76,10 +91,4 @@ while True:
             print("Tarefa concluída.\n")
         else:
             print("Essa tarefa não existe.\n")
-    elif escolha == '5':
-        print()
-        break
-    
-    else:
-        print("Opção inválida. Tente novamente.")
-conexao.close()
+"""
