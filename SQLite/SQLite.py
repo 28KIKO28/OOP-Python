@@ -31,11 +31,12 @@ def criar_tabela_tarefas():
     CREATE TABLE IF NOT EXISTS tarefas (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         task TEXT NOT NULL,
-        subject TEXT NOT NULL, 
+        subjects TEXT NOT NULL, 
         status TEXT NOT NULL,
         due_date DATE NOT NULL,
         prioritie TEXT NOT NULL,
-        teacher TEXT NOT NULL
+        teacher TEXT NOT NULL,
+        role ROLE(TEACHER,STUDENT)
     )
     """)
     con.commit()
