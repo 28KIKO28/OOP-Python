@@ -31,7 +31,7 @@ def criar_tabela_tarefas():
     CREATE TABLE IF NOT EXISTS tarefas (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         task TEXT NOT NULL,
-        subject TEXT NOT NULL,
+        subject TEXT NOT NULL, 
         status TEXT NOT NULL,
         due_date DATE NOT NULL,
         prioritie TEXT NOT NULL,
@@ -41,7 +41,7 @@ def criar_tabela_tarefas():
     con.commit()
     con.close()
 
-def adicionar_tarefa(tittle, subject, status, prioritie, teacher):
+def adicionar_tarefa(tittle, subject, status, prioritie, teacher class):
     con = conectar_tarefas()
     con.execute("""INSERT INTO tarefas (task, subject, status, prioritie, teacher)
     VALUES (?, ?, ?, ?, ?)
@@ -49,11 +49,12 @@ def adicionar_tarefa(tittle, subject, status, prioritie, teacher):
     con.commit()
     con.close()
 
-def tarefas_concluir():
+def tarefas_concluir(escolha):
         con = conectar_tarefas
         cursor = con.cursor()
         cursor.execute("SELECT * FROM tarefas")
         tarefas = cursor.fetchall()
+        tarefas[escolha]
 def tarefas_ler():
     con = conectar_tarefas
     cursor = con.cursor()
