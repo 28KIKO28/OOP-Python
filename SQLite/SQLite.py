@@ -11,7 +11,7 @@ def login_tabela():
             login TEXT NOT NULL,
             nickname TEXT NOT NULL,
             password TEXT NOT NULL,
-            role TEXT CHECK(role in ('student','teacher','admin','dt')) TEXT NOT NULL
+            role TEXT CHECK(role in ('student','teacher','admin','dt')) ROLE NOT NULL
     )
     """)
     con.commit()
@@ -35,8 +35,7 @@ def criar_tabela_tarefas():
         status TEXT NOT NULL,
         due_date DATE NOT NULL,
         prioritie TEXT NOT NULL,
-        teacher TEXT NOT NULL,
-        role ROLE(TEACHER,STUDENT)
+        teacher TEXT NOT NULL
     )
     """)
     con.commit()

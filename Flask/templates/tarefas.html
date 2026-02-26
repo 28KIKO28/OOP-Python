@@ -11,20 +11,20 @@
     <h2>Novas Tarefas:</h2>
     <form action="/add", method="post">
         <label>Tarefa:</label><br>
-        <input type="text" name="tarefa" placeholder="Qual a Tarefa?"><br>
+        <input type="text" name="tarefa" placeholder="Qual a Tarefa?" required><br>
         <label>Disciplina:</label><br>
-        <input type="text" name="disciplina" placeholder="Qual a Disciplina?"><br>
-        <label>Prioridade:</label><br>
-        <select name="prioridade" placeholder="Prioridade">
-            <option disabled selected>Selecione a Prioridade</option>
-            <option>Alta</option>
-            <option>Média</option>
-            <option>Baixa</option>
-            <option>Opcional</option>
-        </select><br>
+        <input type="text" name="disciplina" placeholder="Qual a Disciplina?"required><br>
         <label>Data:</label><br>
-        <input type="date" name="data" placeholder="data" value=datae><br>
-        <p></p>
+        <input type="date" name="data" placeholder="data" value=datae required><br>
+        <label for="prioridade">Prioridade:</label><br>
+        <select name="prioridade" placeholder="Prioridade" id="prioridade" required>
+            <option disabled selected>Selecione a Prioridade</option>
+            <option value="Alta">Alta</option>
+            <option value="Média">Média</option>
+            <option value="Baixa">Baixa</option>
+            <option value="Opcional">Opcional</option>
+        </select>
+        <br><br>
         <button>Adicionar Tarefa</button>
     </form>
 </body>

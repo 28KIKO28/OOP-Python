@@ -1,8 +1,9 @@
 from flask import Flask, render_template,request,redirect
 from os import O_APPEND
-# from SQLite import criar_tabela
+# from SQLite import criar_tabela,login_tabela
 
 # criar_tabela()
+# login_tabela()
 
 app = Flask(__name__)
 
@@ -34,7 +35,7 @@ def alunos (indice):
 def adicionar():
     nova_tarefa = (request.form["tarefa"],request.form["disciplina"],request.form["prioridade"],request.form["data"],"Pendente")
     tarefas.append(nova_tarefa)
-    return redirect("/tasks")
+    return redirect("/addtask")
 
 @app.route("/tasks")
 def listar_tarefas():
