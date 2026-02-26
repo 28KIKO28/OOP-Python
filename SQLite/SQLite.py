@@ -41,11 +41,11 @@ def criar_tabela_tarefas():
     con.commit()
     con.close()
 
-def adicionar_tarefa(tittle, subject, status, prioritie, teacher class):
+def adicionar_tarefa(tittle, subject, status, prioritie, teacher, classe):
     con = conectar_tarefas()
-    con.execute("""INSERT INTO tarefas (task, subject, status, prioritie, teacher)
-    VALUES (?, ?, ?, ?, ?)
-    """, (tittle, subject, status, prioritie, teacher))
+    con.execute("""INSERT INTO tarefas (task, subject, status, prioritie, teacher, class)
+    VALUES (?, ?, ?, ?, ?, ?)
+    """, (tittle, subject, status, prioritie, teacher, classe))
     con.commit()
     con.close()
 
