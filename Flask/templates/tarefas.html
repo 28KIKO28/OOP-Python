@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novas Tarefas</title>
     <style>
+        a {
+            text-decoration: none;
+            color:darkred;
+        }
+        body {
+            color: darkred;
+            font-family: sans-serif;
+        }
     </style>
 </head>
 <body>
@@ -18,7 +26,7 @@
         <input type="date" name="data" placeholder="data" value=datae required><br>
         <label for="prioridade">Prioridade:</label><br>
         <select name="prioridade" placeholder="Prioridade" id="prioridade" required>
-            <option disabled selected>Selecione a Prioridade</option>
+            <option value="" disabled selected>Selecione a Prioridade</option>
             <option value="Alta">Alta</option>
             <option value="Média">Média</option>
             <option value="Baixa">Baixa</option>
@@ -27,5 +35,6 @@
         <br><br>
         <button>Adicionar Tarefa</button>
     </form>
+    <a href="/tasks">Lista de tarefas</a>
 </body>
 </html>

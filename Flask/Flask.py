@@ -1,9 +1,9 @@
 from flask import Flask, render_template,request,redirect
 from os import O_APPEND
-# from SQLite import criar_tabela,login_tabela
+from SQLite import criar_tabela,login_tabela
 
-# criar_tabela()
-# login_tabela()
+criar_tabela()
+login_tabela()
 
 app = Flask(__name__)
 
