@@ -11,18 +11,29 @@ def login_tabela():
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            login TEXT NOT NULL UNIQUE,
-            nickname TEXT NOT NULL,
-            password TEXT NOT NULL,
-            role TEXT NOT NULL CHECK(role IN ('aluno','professor','dt','admin')),
+            login VARCHAR(50) NOT NULL UNIQUE,
+            nickname VARCHAR(150) NOT NULL,
+            password VARCHAR(255) NOT NULL,
+            tipo_usuario TEXT NOT NULL CHECK(tipo_usuario IN ('aluno','professor','dt','admin'))
+        )
     """)
 
     cursor.execute("""
-        CREATE TABLE IF NOT EXISTS profs_turmas (
-            user_id INTEGER USERS(id),
-            turmas 
+        CREATE TABLE IF NOT EXISTS turmas (
+            id INTERGER PRIMARY KEY AUTOINCREMENT,
+            nome TEXT NOT NULL UNIQUE,
+            dt_id INTERGER UNIQUE,
+            FOREIGN KEY (dt_id) REFERENCES users(id)
         )
     """)
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS professor_turma (
+            user_id INTERGER,
+            turma INT NOT NULL,
+            disciplinas LIST NOT NULL
+        )
+""")
 
     con.commit()
     con.close()
