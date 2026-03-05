@@ -14,13 +14,13 @@ def login_tabela():
             login VARCHAR(50) NOT NULL UNIQUE,
             nickname VARCHAR(150) NOT NULL,
             password VARCHAR(255) NOT NULL,
-            tipo_usuario TEXT NOT NULL CHECK(tipo_usuario IN ('aluno','professor','dt','admin'))
+            tipo_usuario TEXT NOT NULL
         )
     """)
 
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS turmas (
-            id INTERGER PRIMARY KEY AUTOINCREMENT,
+            id PRIMARY KEY AUTOINCREMENT,
             nome TEXT NOT NULL UNIQUE,
             dt_id INTERGER UNIQUE,
             FOREIGN KEY (dt_id) REFERENCES users(id)
@@ -28,13 +28,59 @@ def login_tabela():
     """)
 
     cursor.execute("""
+        CREATE TABLE IF NOT EXISTS professor_turmas (
+            professor_id INTERGER,
+            turma_id INTERGER
+            FORGEIN KEY (professor_id,turma_id) REFERENCES users(id), turma(id)
+        )
+    """)
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS aluno_turmas (
+            aluno_id INTERGER,
+            turma_id INTERGER
+            FORGEIN KEY (aluno_id,turma_id) REFERENCES users(id), turma(id)
+        )
+    """)
+    
+    cursor.execute("""
         CREATE TABLE IF NOT EXISTS professor_turma (
             user_id INTERGER,
-            turma INT NOT NULL,
+            turmas INT NOT NULL,
+            disciplinas  NOT NULL
+        )
+    """)
+    
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS disciplina (
+            id PRIMARY KEY AUTOINCREMENT,
+            disciplina TEXT NOT NULL
+        )
+    """)
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS disciplina_professor (
+            professor_id INTERGER,
+            disciplinas INTERGER
+            FORGEIN KEY (professor_id,disciplinas) REFERENCES users(id), disciplina(disciplina)
+        )
+    """)
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS dt_turma (
+            dt_id INTERGER,
+            turma_id INTERGER
+            FORGEIN KEY (aluno_id,turma_id) REFERENCES users(id), turma(id)
+        )
+    """)
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS dt_turma (
+            user_id INTERGER,
+            turmas 
             disciplinas LIST NOT NULL
         )
-""")
-
+    """)
+    
     con.commit()
     con.close()
 
